@@ -41,8 +41,20 @@ export default {
       for (let i = 0; i < 4; i++) {
         this.captchaStr += parseInt(Math.random() * 10);
       }
-      this.$axios.get("https://39.105.14.188/api/sms/send/message?phone=" + mobile + "&message=【青年大学习——寻找仁怀“锦鲤”】验证码——" + this.captchaStr).then(res => {});
-      // this.$jsonp("https://39.105.14.188/api/sms/send/message?phone=" + mobile + "&message=【青年大学习——寻找仁怀“锦鲤”】验证码——" + this.captchaStr, null, () =>{})
+      let params ={
+      	"head": {
+		"transcode": "check_code",
+		"traceid": "123456",
+		"channel": "IOS",
+		"devid": "866980023217058",
+		"context": new Date()
+	},
+	"body": {
+		"mobile":mobile,
+		"code":this.captchaStr
+	}
+      }
+      this.$axios.post("/check_code" ,params).then(res => {});
     },
     submitUser(){
       if( this.name === ''){
