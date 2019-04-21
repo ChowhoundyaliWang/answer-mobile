@@ -74,7 +74,6 @@ export default {
     getTime(total) {
       // 计算答题时间
       let time = parseFloat(total) / 1000;
-    //   const ms = parseFloat(total) % 1000
       if (null != time && "" != time) {
         if (time > 60 && time < 60 * 60) {
           time = '00:'+parseInt(time / 60.0) + ":" + parseInt((parseFloat(time / 60.0) - parseInt(time / 60.0)) * 60) ;
@@ -84,7 +83,6 @@ export default {
           time = "00:00:"+parseInt(time);
         }
       }
-    //   return ms ? time + ":"+ms : time +":000" ;
     return time;
     }
   }
@@ -99,7 +97,7 @@ export default {
     h3 {
       text-align: center;
       margin: 3vh 0;
-      color: #fff;
+      color: #ae0002;
       font-weight: 550;
       font-size: 16px;
       span {
