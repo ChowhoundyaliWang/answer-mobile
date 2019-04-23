@@ -15,23 +15,18 @@ body, h3, h4, p{
 body{
     height: 100%;
     width: 100%;
-    background: url(../assets/bg.png) no-repeat;
+    background: url(../assets/login.jpg) no-repeat;
     background-size: 100% 100%;
-}
-.body-mask{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(232, 158, 115, 0.25)
 }
 .log-container .mint-field-core{
     background-color: transparent;
-    color: #333;
-    border-bottom: 1px solid #333;
+    color: #460d76;
+    border-bottom: 2px solid #460d76;
 }
 .log-container .mint-cell-wrapper{
     background-size: 120% 0;
     padding: 0;
 }
 .log-container .mint-field .mint-cell-title{
-    width: 80px;
+    width: 55px;
 }

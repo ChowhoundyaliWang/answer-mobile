@@ -1,9 +1,9 @@
 <template>
   <div class="home-container">
-    <div class='img-div'>
-      <img src="../assets/font01.png" alt="error" class='font-img'>
+    <div class="img-div">
+      <img src="../assets/font01.png" alt="error" class="font-img">
     </div>
-    
+
     <div class="log-container">
       <mt-field label="姓名" placeholder v-model="name"></mt-field>
       <mt-field
@@ -14,15 +14,14 @@
         @change=" captchaStr = ''; captcha = ''"
       ></mt-field>
       <mt-field label="验证码" v-model="captcha">
-        <mt-button plain class="captcha-btn" @click="getCaptcha">点击获取</mt-button>
+        <button class="captcha-btn" @click="getCaptcha">点击获取</button>
       </mt-field>
-      <mt-button plain class="submit-btn" @click="submitUser">开始答题</mt-button>
+      <button class="submit-btn" @click="submitUser">开&nbsp;&nbsp;始&nbsp;&nbsp;答&nbsp;&nbsp;题</button>
     </div>
-    <p>
-      主办单位:共青团仁怀市委 <br>
-      承办单位:仁怀市搏悦健身俱乐部 <br>
-      活动时间:2019年4月23日至2019年4月25日
-    </p>
+    <p>主办单位：共青团仁怀市委</p>
+    <p>协办单位：仁怀市搏悦健身俱乐部</p> 
+    <p>活动时间：4月23日-4月25日</p> 
+    
   </div>
 </template>
 
@@ -116,13 +115,14 @@ export default {
 
 <style lang="scss" scoped>
 .home-container {
-  padding: 8vh 0 0 0;
-  color: #333;
-  .img-div{
+  padding: 3vh 0 0 0;
+  color: #460d76;
+  .img-div {
     text-align: center;
-    .font-img{
-      width: 300px;
+    .font-img {
+      width: 240px;
     }
+    margin-bottom: 6vh;
   }
   .mint-cell {
     background-color: transparent;
@@ -133,30 +133,44 @@ export default {
 
   .log-container {
     font-weight: 700;
-    padding: 2vh 15% 0 15%;
-    .submit-btn {
-      margin-top: 6vh;
-      width: 100%;
+    padding: 2vh 15% 10vh 15%;
+    button {
+      background-color: transparent;
+      border: none;
+      color: #ffffff;
+      padding: 0;
+      &.submit-btn {
+        margin-top: 6vh;
+        width: 100%;
+        height: 40px;
+        background-color: #a867e0 ;
+        border-radius: 16px;
+        line-height: 40px;
+        font-size: 20px;
+        background: radial-gradient(#9551cd,#a867e0,#b675ec, #d2a4fa, ragb(255,255,255,0.1));
+      }
+      &.captcha-btn {
+        width: 76px;
+        height: 30px;
+        background-color: #a867e0;
+        line-height: 30px;
+        border-radius: 10px;
+      }
+      outline: none;
     }
     .mint-button--default.is-plain {
       border-color: #333;
       color: #333;
       border-radius: 0;
     }
-    .captcha-btn {
-      font-size: 13px;
-      height: 28px;
-      line-height: 28px;
-      margin-left: 10px;
-    }
   }
-  p{
-    width: 100%;
+  p {
+    width: 188px;
     text-align: left;
     font-size: 12px;
-    line-height: 18px;
-    margin-top: 6vh;
-    margin-left: calc(50% - 118px)
+    line-height: 24px;
+    margin-left: calc(50% - 94px);
+    color: #460d76;
   }
 }
 </style>

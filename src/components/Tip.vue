@@ -19,7 +19,7 @@ export default {
   padding: 40vh 20%;
   h3{
       text-align: center;
-      color: #ffffff;
+      color: #460d76;
       font-size: 22px;
       letter-spacing: 1.4px;
   }
