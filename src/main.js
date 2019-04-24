@@ -25,7 +25,7 @@ router.beforeEach((to, from, next) => {
   }
   const openId = sessionStorage.getItem('openId')  // 有openId表示已授权
   if (openId) {
-    return checkUserInfo(openId, next)
+    checkUserInfo(openId, next)
   } else {
     const curUrl = window.location.href
     // 判断是否微信授权，如果未授权则跳转到授权页面；如果已授权，进入 to 中的目标 路由对象
@@ -50,7 +50,7 @@ router.beforeEach((to, from, next) => {
           const subscribe = data.body.subscribe
           sessionStorage.setItem('openId', openId)
           if(subscribe == 1){
-            return checkUserInfo(openId, next)
+            checkUserInfo(openId, next)
           }else{
             return next('/tip')
           }
